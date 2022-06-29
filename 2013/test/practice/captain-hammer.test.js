@@ -28,7 +28,7 @@ describe('splitInput', () => {
 });
 
 describe('solve', () => {
-    test('[98, 980]', () => {
+    test.only('[98, 980]', () => {
         expect(captainHammer.solve([98, 980])).toBe('45.0000000');
     });
 
