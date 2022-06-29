@@ -1,7 +1,7 @@
 const captainHammer = require('../../practice/captain-hammer/index');
 
 describe('splitInput', () => {
-    test('sample.in', () => {
+    test.only('sample.in', () => {
         expect(
             captainHammer.splitInput(`3
 98 980
