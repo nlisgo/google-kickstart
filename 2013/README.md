@@ -37,4 +37,20 @@ docker run -it -v $(pwd):/app -w /app/test node npm test practice/moist.test.js
 
 <!-- problem-end: practice:moist -->
 
+### Captain Hammer
+
+<!-- problem-start: practice:captain-hammer -->
+
+```
+cat ./practice/captain-hammer/sample.in | docker run -i -v $(pwd):/app -w /app/practice/captain-hammer node node index.js
+```
+
+to run the tests:
+
+```
+docker run -it -v $(pwd):/app -w /app/test node npm test practice/captain-hammer.test.js
+```
+
+<!-- problem-end: practice:captain-hammer -->
+
 <!-- stage-end: practice -->
