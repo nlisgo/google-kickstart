@@ -53,4 +53,20 @@ docker run -it -v $(pwd):/app -w /app/test node npm test practice/captain-hammer
 
 <!-- problem-end: practice:captain-hammer -->
 
+### Bad Horse
+
+<!-- problem-start: practice:bad-horse -->
+
+```
+cat ./practice/bad-horse/sample.in | docker run -i -v $(pwd):/app -w /app/practice/bad-horse node node index.js
+```
+
+to run the tests:
+
+```
+docker run -it -v $(pwd):/app -w /app/test node npm test practice/bad-horse.test.js
+```
+
+<!-- problem-end: practice:bad-horse -->
+
 <!-- stage-end: practice -->
