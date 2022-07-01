@@ -6,9 +6,7 @@ const splitInput = input => input.slice(1).map(i => i.split(' ').map(Number));
 /**
  * Accepts a single input case and returns the result as a string.
  */
-const solve = input => {
-    return input;
-};
+const solve = ([V, D]) => (90 * Math.asin(Math.max(-1, Math.min(1, 9.8 * D / V ** 2))) / Math.PI).toFixed(7);
 
 /**
  * Accepts all lines of input and prepares all solutions.
