@@ -1,7 +1,7 @@
 const badHorse = require('../../practice/bad-horse/index');
 
 describe('splitInput', () => {
-    test('sample.in', () => {
+    test.only('sample.in', () => {
         expect(
             badHorse.splitInput(`2
 1
