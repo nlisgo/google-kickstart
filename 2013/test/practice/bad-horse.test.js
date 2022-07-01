@@ -39,7 +39,7 @@ Fury_Leika Dead_Bowie`.split(/\r?\n/))
 });
 
 describe('solve', () => {
-    test("[['Dead_Bowie', 'Fake_Thomas_Jefferson']]", () => {
+    test.only("[['Dead_Bowie', 'Fake_Thomas_Jefferson']]", () => {
         expect(badHorse.solve(['Dead_Bowie', 'Fake_Thomas_Jefferson'])).toBe('Yes');
     });
 
