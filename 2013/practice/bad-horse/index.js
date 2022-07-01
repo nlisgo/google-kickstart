@@ -1,7 +1,22 @@
 /**
  * Accepts an array of lines and organises into separate cases.
  */
-const splitInput = input => input.slice(1);
+const splitInput = input => {
+    const cases = [];
+    let c = [];
+    input.forEach(i => {
+        if (isNaN(i)) { 
+            c.push(i.split(' '));
+        } else if (c.length > 0) {
+            cases.push(c);
+            c = [];
+        }
+    });
+
+    cases.push(c);
+
+    return cases;
+};
 
 /**
  * Accepts a single input case and returns the result as a string.
