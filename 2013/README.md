@@ -70,3 +70,24 @@ docker run -it -v $(pwd):/app -w /app/test node npm test practice/bad-horse.test
 <!-- problem-end: practice:bad-horse -->
 
 <!-- stage-end: practice -->
+## Round A
+
+<!-- stage-start: round-a -->
+
+### Sorting
+
+<!-- problem-start: round-a:sorting -->
+
+```
+cat ./round-a/sorting/sample.in | docker run -i -v $(pwd):/app -w /app/round-a/sorting node node index.js
+```
+
+to run the tests:
+
+```
+docker run -it -v $(pwd):/app -w /app/test node npm test round-a/sorting.test.js
+```
+
+<!-- problem-end: round-a:sorting -->
+
+<!-- stage-end: round-a -->
