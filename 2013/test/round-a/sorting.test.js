@@ -3,52 +3,58 @@ const sorting = require('../../round-a/sorting/index');
 describe('splitInput', () => {
     test('sample.in', () => {
         expect(
-            sorting.splitInput(`3
-one
-two
-three`.split(/\r?\n/))
+            sorting.splitInput(`2
+5
+5 2 4 3 1
+7
+-5 -12 87 2 88 20 11`.split(/\r?\n/))
         )
         .toStrictEqual(
             [
-                'one',
-                'two',
-                'three',
+                [
+                    5,
+                    2,
+                    4,
+                    3,
+                    1,
+                ],
+                [
+                    -5,
+                    -12,
+                    87,
+                    2,
+                    88,
+                    20,
+                    11,
+                ],
             ]
         );
     });
 });
 
 describe('solve', () => {
-    test('one', () => {
-        expect(sorting.solve('one')).toBe('one');
+    test('[5, 2, 4, 3, 1]', () => {
+        expect(sorting.solve([5, 2, 4, 3, 1])).toBe('1 4 2 3 5');
     });
 
-    test('two', () => {
-        expect(sorting.solve('two')).toBe('two');
-    });
-
-    test('three', () => {
-        expect(sorting.solve('three')).toBe('three');
-    });
-
-    test('four', () => {
-        expect(sorting.solve('four')).toBe('four');
+    test('[-5, -12, 87, 2, 88, 20, 11]', () => {
+        expect(sorting.solve([-5, -12, 87, 2, 88, 20, 11])).toBe('-5 88 11 20 2 -12 87');
     });
 });
 
 describe('solveInputs', () => {
     test('sample.in', () => {
         expect(
-            sorting.solveInputs(`3
-one
-two
-three`.split(/\r?\n/))
+            sorting.solveInputs(`2
+5
+5 2 4 3 1
+7
+-5 -12 87 2 88 20 11`.split(/\r?\n/))
         )
         .toStrictEqual(
             [
-                'Case #1: one',
-                'Case #2: two',
-                'Case #3: three',
+                'Case #1: 1 4 2 3 5',
+                'Case #2: -5 88 11 20 2 -12 87',
             ]
         );
     });
