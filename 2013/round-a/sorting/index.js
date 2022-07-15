@@ -17,7 +17,26 @@ const splitInput = input => {
  * Accepts a single input case and returns the result as a string.
  */
 const solve = input => {
-    return input;
+    let sorted = input;
+    let odds = [];
+    let evens = [];
+
+    input.forEach(i => {
+        if (i % 2) {
+            odds.push(i);
+        } else {
+            evens.push(i);
+        }
+    });
+
+    odds = odds.sort((a, b) => a - b);
+    evens = evens.sort((a, b) => b - a);
+
+    input.forEach((i, pos) => {
+        sorted[pos] = (i % 2) ? odds.shift() : evens.shift();
+    });
+
+    return sorted.join(' ');
 };
 
 /**
