@@ -1,7 +1,7 @@
 const readPhoneNumber = require('../../round-a/read-phone-number/index');
 
 describe('splitInput', () => {
-    test.only('sample.in', () => {
+    test('sample.in', () => {
         expect(
             readPhoneNumber.splitInput(`3
 15012233444 3-4-4
