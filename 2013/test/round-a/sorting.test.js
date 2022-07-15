@@ -33,7 +33,7 @@ describe('splitInput', () => {
 });
 
 describe('solve', () => {
-    test('[5, 2, 4, 3, 1]', () => {
+    test.only('[5, 2, 4, 3, 1]', () => {
         expect(sorting.solve([5, 2, 4, 3, 1])).toBe('1 4 2 3 5');
     });
 
