@@ -1,7 +1,17 @@
 /**
  * Accepts an array of lines and organises into separate cases.
  */
-const splitInput = input => input.slice(1);
+const splitInput = input => {
+    const cases = [];
+
+    input.slice(1).forEach((i, pos) => {
+        if (pos % 2) {
+            cases.push(i.split(' ').map(Number));
+        }
+    });
+
+    return cases;
+};
 
 /**
  * Accepts a single input case and returns the result as a string.
