@@ -22,18 +22,14 @@ const solve = input => {
     let evens = [];
 
     input.forEach(i => {
-        if (i % 2) {
-            odds.push(i);
-        } else {
-            evens.push(i);
-        }
+        (i % 2 ? odds : evens).push(i);
     });
 
     odds = odds.sort((a, b) => a - b);
     evens = evens.sort((a, b) => b - a);
 
     input.forEach((i, pos) => {
-        sorted[pos] = (i % 2) ? odds.shift() : evens.shift();
+        sorted[pos] = (i % 2 ? odds : evens).shift();
     });
 
     return sorted.join(' ');
