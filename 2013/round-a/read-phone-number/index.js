@@ -1,7 +1,19 @@
 /**
  * Accepts an array of lines and organises into separate cases.
  */
-const splitInput = input => input.slice(1);
+const splitInput = input => input.slice(1).map(i => {
+    [numberRaw, numberSplit] = i.replace(/\-/g, '').split(' ').map(i => i.split('').map(Number));
+
+    return numberSplit.map(i => {
+        const section = [];
+
+        for (let j = 0; j < i; j++) {
+            section.push(numberRaw.shift());
+        }
+
+        return section;
+    });
+});
 
 /**
  * Accepts a single input case and returns the result as a string.
