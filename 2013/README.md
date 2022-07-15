@@ -90,4 +90,20 @@ docker run -it -v $(pwd):/app -w /app/test node npm test round-a/sorting.test.js
 
 <!-- problem-end: round-a:sorting -->
 
+### Read Phone Number
+
+<!-- problem-start: round-a:read-phone-number -->
+
+```
+cat ./round-a/read-phone-number/sample.in | docker run -i -v $(pwd):/app -w /app/round-a/read-phone-number node node index.js
+```
+
+to run the tests:
+
+```
+docker run -it -v $(pwd):/app -w /app/test node npm test round-a/read-phone-number.test.js
+```
+
+<!-- problem-end: round-a:read-phone-number -->
+
 <!-- stage-end: round-a -->
