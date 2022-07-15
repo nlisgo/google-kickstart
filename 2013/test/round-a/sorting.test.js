@@ -1,7 +1,7 @@
 const sorting = require('../../round-a/sorting/index');
 
 describe('splitInput', () => {
-    test.only('sample.in', () => {
+    test('sample.in', () => {
         expect(
             sorting.splitInput(`2
 5
@@ -33,7 +33,7 @@ describe('splitInput', () => {
 });
 
 describe('solve', () => {
-    test.only('[5, 2, 4, 3, 1]', () => {
+    test('[5, 2, 4, 3, 1]', () => {
         expect(sorting.solve([5, 2, 4, 3, 1])).toBe('1 4 2 3 5');
     });
 
