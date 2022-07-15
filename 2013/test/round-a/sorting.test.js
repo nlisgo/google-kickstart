@@ -1,7 +1,7 @@
 const sorting = require('../../round-a/sorting/index');
 
 describe('splitInput', () => {
-    test('sample.in', () => {
+    test.only('sample.in', () => {
         expect(
             sorting.splitInput(`2
 5
