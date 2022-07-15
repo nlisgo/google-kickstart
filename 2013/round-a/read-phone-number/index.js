@@ -2,7 +2,7 @@
  * Accepts an array of lines and organises into separate cases.
  */
 const splitInput = input => input.slice(1).map(i => {
-    [numberRaw, numberSplit] = i.replace(/\-/g, '').split(' ').map(i => i.split('').map(Number));
+    [numberRaw, numberSplit] = i.split(' ').map((i, pos) => i.split(pos % 2 ? '-' : '').map(Number));
 
     return numberSplit.map(i => {
         const section = [];
