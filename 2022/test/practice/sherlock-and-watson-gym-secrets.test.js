@@ -1,7 +1,7 @@
 const sherlockAndWatsonGymSecrets = require('../../practice/sherlock-and-watson-gym-secrets/index');
 
 describe('splitInput', () => {
-    test('sample.in', () => {
+    test.only('sample.in', () => {
         expect(
             sherlockAndWatsonGymSecrets.splitInput(`3
 1 1 5 3
