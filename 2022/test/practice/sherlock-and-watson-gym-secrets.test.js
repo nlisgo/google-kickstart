@@ -4,35 +4,31 @@ describe('splitInput', () => {
     test('sample.in', () => {
         expect(
             sherlockAndWatsonGymSecrets.splitInput(`3
-one
-two
-three`.split(/\r?\n/))
+1 1 5 3
+1 2 4 5
+1 1 2 2`.split(/\r?\n/))
         )
         .toStrictEqual(
             [
-                'one',
-                'two',
-                'three',
+                [1, 1, 5, 3],
+                [1, 2, 4, 5],
+                [1, 1, 2, 2],
             ]
         );
     });
 });
 
 describe('solve', () => {
-    test('one', () => {
-        expect(sherlockAndWatsonGymSecrets.solve('one')).toBe('one');
+    test('[1, 1, 5, 3]', () => {
+        expect(sherlockAndWatsonGymSecrets.solve([1, 1, 5, 3])).toBe(8);
     });
 
     test('two', () => {
-        expect(sherlockAndWatsonGymSecrets.solve('two')).toBe('two');
+        expect(sherlockAndWatsonGymSecrets.solve([1, 2, 4, 5])).toBe(3);
     });
 
     test('three', () => {
-        expect(sherlockAndWatsonGymSecrets.solve('three')).toBe('three');
-    });
-
-    test('four', () => {
-        expect(sherlockAndWatsonGymSecrets.solve('four')).toBe('four');
+        expect(sherlockAndWatsonGymSecrets.solve([1, 1, 2, 2])).toBe(0);
     });
 });
 
@@ -40,15 +36,15 @@ describe('solveInputs', () => {
     test('sample.in', () => {
         expect(
             sherlockAndWatsonGymSecrets.solveInputs(`3
-one
-two
-three`.split(/\r?\n/))
+1 1 5 3
+1 2 4 5
+1 1 2 2`.split(/\r?\n/))
         )
         .toStrictEqual(
             [
-                'Case #1: one',
-                'Case #2: two',
-                'Case #3: three',
+                'Case #1: 8',
+                'Case #2: 3',
+                'Case #3: 0',
             ]
         );
     });
