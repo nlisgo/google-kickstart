@@ -7,7 +7,16 @@ const splitInput = input => input.slice(1).map(i => i.split(' ').map(Number));
  * Accepts a single input case and returns the result as a string.
  */
 const solve = input => {
-    return input;
+    [A, B, N, K] = input;
+    let getAlong = 0;
+    possibleValuesOfIAndJ(N).forEach(possible => {
+        [i, j] = possible;
+        if ((i^A + j^B) % K === 0) {
+            getAlong++;
+        }
+    });
+
+    return getAlong;
 };
 
 /**
