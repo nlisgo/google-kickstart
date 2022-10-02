@@ -1,7 +1,7 @@
 const sherlockAndWatsonGymSecrets = require('../../practice/sherlock-and-watson-gym-secrets/index');
 
 describe('splitInput', () => {
-    test.only('sample.in', () => {
+    test('sample.in', () => {
         expect(
             sherlockAndWatsonGymSecrets.splitInput(`3
 1 1 5 3
@@ -19,7 +19,7 @@ describe('splitInput', () => {
 });
 
 describe('possibleValuesOfIAndJ', () => {
-    test.only('5', () => {
+    test('5', () => {
         expect(sherlockAndWatsonGymSecrets.possibleValuesOfIAndJ(5)).toStrictEqual([
             [1, 2],
             [2, 1],
@@ -44,7 +44,7 @@ describe('possibleValuesOfIAndJ', () => {
         ]);
     });
 
-    test.only('4', () => {
+    test('4', () => {
         expect(sherlockAndWatsonGymSecrets.possibleValuesOfIAndJ(4)).toStrictEqual([
             [1, 2],
             [2, 1],
@@ -61,13 +61,13 @@ describe('possibleValuesOfIAndJ', () => {
         ]);
     });
 
-    test.only('2', () => {
+    test('2', () => {
         expect(sherlockAndWatsonGymSecrets.possibleValuesOfIAndJ(2)).toStrictEqual([[1, 2], [2, 1]]);
     });
 });
 
 describe('solve', () => {
-    test.only('[1, 1, 5, 3]', () => {
+    test('[1, 1, 5, 3]', () => {
         expect(sherlockAndWatsonGymSecrets.solve([1, 1, 5, 3])).toBe(8);
     });
 
