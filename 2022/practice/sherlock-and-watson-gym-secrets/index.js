@@ -22,6 +22,21 @@ const solveInputs = inputs => {
 };
 
 /**
+ * All possible values for i and j. 
+ */
+const possibleValuesOfIAndJ = N => {
+    const values = [];
+    for (let i = 1; i <= N; i++) {
+        for (let j = i + 1; j <= N; j++) {
+            values.push([i, j]);
+            values.push([j, i]);
+        }
+    }
+
+    return values;
+};
+
+/**
  * If stdin is detected then pass all lines to solveInputs.
  * 
  * Send results to stdout.
@@ -43,6 +58,7 @@ if (!Boolean(process.stdin.isTTY)) {
  * Export all functions that we want to test.
  */
 module.exports = {
+    possibleValuesOfIAndJ,
 	splitInput,
 	solve,
 	solveInputs,
