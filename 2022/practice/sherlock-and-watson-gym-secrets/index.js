@@ -1,7 +1,7 @@
 /**
  * Accepts an array of lines and organises into separate cases.
  */
-const splitInput = input => input.slice(1).map(i => i.split(' ').map(Number));
+const splitInput = input => input.slice(1).map(i => i.split(' ').map(BigInt));
 
 /**
  * Accepts a single input case and returns the result as a string.
@@ -11,7 +11,7 @@ const solve = input => {
     let getAlong = 0;
     possibleValuesOfIAndJ(N).forEach(possible => {
         [i, j] = possible;
-        if ((i^A + j^B) % K === 0) {
+        if ((i**A + j**B) % K === 0n) {
             getAlong++;
         }
     });
@@ -35,8 +35,8 @@ const solveInputs = inputs => {
  */
 const possibleValuesOfIAndJ = N => {
     const values = [];
-    for (let i = 1; i <= N; i++) {
-        for (let j = i + 1; j <= N; j++) {
+    for (let i = 1n; i <= N; i++) {
+        for (let j = i + 1n; j <= N; j++) {
             values.push([i, j]);
             values.push([j, i]);
         }

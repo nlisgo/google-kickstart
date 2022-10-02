@@ -10,9 +10,9 @@ describe('splitInput', () => {
         )
         .toStrictEqual(
             [
-                [1, 1, 5, 3],
-                [1, 2, 4, 5],
-                [1, 1, 2, 2],
+                [1n, 1n, 5n, 3n],
+                [1n, 2n, 4n, 5n],
+                [1n, 1n, 2n, 2n],
             ]
         );
     });
@@ -20,63 +20,63 @@ describe('splitInput', () => {
 
 describe('possibleValuesOfIAndJ', () => {
     test('5', () => {
-        expect(sherlockAndWatsonGymSecrets.possibleValuesOfIAndJ(5)).toStrictEqual([
-            [1, 2],
-            [2, 1],
-            [1, 3],
-            [3, 1],
-            [1, 4],
-            [4, 1],
-            [1, 5],
-            [5, 1],
-            [2, 3],
-            [3, 2],
-            [2, 4],
-            [4, 2],
-            [2, 5],
-            [5, 2],
-            [3, 4],
-            [4, 3],
-            [3, 5],
-            [5, 3],
-            [4, 5],
-            [5, 4],
+        expect(sherlockAndWatsonGymSecrets.possibleValuesOfIAndJ(5n)).toStrictEqual([
+            [1n, 2n],
+            [2n, 1n],
+            [1n, 3n],
+            [3n, 1n],
+            [1n, 4n],
+            [4n, 1n],
+            [1n, 5n],
+            [5n, 1n],
+            [2n, 3n],
+            [3n, 2n],
+            [2n, 4n],
+            [4n, 2n],
+            [2n, 5n],
+            [5n, 2n],
+            [3n, 4n],
+            [4n, 3n],
+            [3n, 5n],
+            [5n, 3n],
+            [4n, 5n],
+            [5n, 4n],
         ]);
     });
 
     test('4', () => {
         expect(sherlockAndWatsonGymSecrets.possibleValuesOfIAndJ(4)).toStrictEqual([
-            [1, 2],
-            [2, 1],
-            [1, 3],
-            [3, 1],
-            [1, 4],
-            [4, 1],
-            [2, 3],
-            [3, 2],
-            [2, 4],
-            [4, 2],
-            [3, 4],
-            [4, 3],
+            [1n, 2n],
+            [2n, 1n],
+            [1n, 3n],
+            [3n, 1n],
+            [1n, 4n],
+            [4n, 1n],
+            [2n, 3n],
+            [3n, 2n],
+            [2n, 4n],
+            [4n, 2n],
+            [3n, 4n],
+            [4n, 3n],
         ]);
     });
 
     test('2', () => {
-        expect(sherlockAndWatsonGymSecrets.possibleValuesOfIAndJ(2)).toStrictEqual([[1, 2], [2, 1]]);
+        expect(sherlockAndWatsonGymSecrets.possibleValuesOfIAndJ(2)).toStrictEqual([[1n, 2n], [2n, 1n]]);
     });
 });
 
 describe('solve', () => {
     test('[1, 1, 5, 3]', () => {
-        expect(sherlockAndWatsonGymSecrets.solve([1, 1, 5, 3])).toBe(8);
+        expect(sherlockAndWatsonGymSecrets.solve([1n, 1n, 5n, 3n])).toBe(8);
     });
 
     test('[1, 2, 4, 5]', () => {
-        expect(sherlockAndWatsonGymSecrets.solve([1, 2, 4, 5])).toBe(3);
+        expect(sherlockAndWatsonGymSecrets.solve([1n, 2n, 4n, 5n])).toBe(3);
     });
 
     test('[1, 1, 2, 2]', () => {
-        expect(sherlockAndWatsonGymSecrets.solve([1, 1, 2, 2])).toBe(0);
+        expect(sherlockAndWatsonGymSecrets.solve([1n, 1n, 2n, 2n])).toBe(0);
     });
 });
 
