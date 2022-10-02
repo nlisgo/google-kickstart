@@ -67,7 +67,7 @@ describe('possibleValuesOfIAndJ', () => {
 });
 
 describe('solve', () => {
-    test('[1, 1, 5, 3]', () => {
+    test.only('[1, 1, 5, 3]', () => {
         expect(sherlockAndWatsonGymSecrets.solve([1, 1, 5, 3])).toBe(8);
     });
 
